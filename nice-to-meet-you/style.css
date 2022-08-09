@@ -1,0 +1,11 @@
+html {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: hidden;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
+}

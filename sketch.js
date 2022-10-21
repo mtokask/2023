@@ -26,7 +26,7 @@ function draw() {
   push();
   translate(0, 0, 0);
   // 適度なサイズに拡大
-  scale(0.9);
+  scale(0.85);
   // そのままでは逆さなので上下を逆にする
   rotateZ(180);
   rotateY(angle * 0.5);
@@ -37,7 +37,8 @@ function draw() {
 
   // heart
   push();
-  translate(frameCount * 1, frameCount * 0.5);
+  // translate(frameCount * 1, frameCount * 0.5);
+  translate(0, 280, 0);
   // 適度なサイズに拡大
   scale(3);
   // そのままでは逆さなので上下を逆にする

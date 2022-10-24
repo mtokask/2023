@@ -1,10 +1,8 @@
 let angle = 0;
 let namecard;
-let heart;
 
 function preload() {
   namecard = loadModel("namecard.obj");
-  heart = loadModel("heart.obj");
 }
 
 function setup() {
@@ -18,9 +16,9 @@ function draw() {
 
   noStroke();
   normalMaterial();
-  //   ambientLight(0, 0, 255);
-  //   directionalLight(255, 255, 255, 1, 1, 0);
-  //   specularMaterial(255);
+  ambientLight(0, 0, 255);
+  directionalLight(255, 255, 255, 1, 1, 0);
+  specularMaterial(255);
 
   // namecard
   push();
@@ -33,19 +31,6 @@ function draw() {
 
   // 描画
   model(namecard);
-  pop();
-
-  // heart
-  push();
-  // translate(frameCount * 1, frameCount * 0.5);
-  translate(0, 280, 0);
-  // 適度なサイズに拡大
-  scale(3);
-  // そのままでは逆さなので上下を逆にする
-  rotateZ(180);
-  rotateY(angle * 3);
-  // 描画
-  model(heart);
   pop();
 
   angle += 1;

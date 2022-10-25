@@ -4,8 +4,45 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   overflow: hidden;
+  cursor: url("../img/cursor.png"), auto !important;
+  cursor: -webkit-image-set(url("../img/cursor.png") 1x, url("../img/cursor_2x.png") 2x), auto !important;
 }
 
 html ::-webkit-scrollbar {
   display: none;
+}
+
+a {
+  cursor: url("../img/cursor_on.png"), auto !important;
+  cursor: -webkit-image-set(url("../img/cursor_on.png") 1x, url("../img/cursor_on_2x.png") 2x), auto !important;
+}
+
+.gradient-box {
+  background-image: linear-gradient(90deg, rgb(255, 0, 0) 33%, rgb(0, 255, 0) 66%, rgb(0, 0, 255));
+}
+
+.gradient-box {
+  /* background-imageは省略 */
+  filter: hue-rotate(360deg);
+  animation: ani 15s infinite;
+}
+@keyframes ani {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.gradient-box {
+  /* background-image 省略 */
+  /* filter 省略 */
+  /* animation 省略 */
+  /* @keyframes 省略 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.02em transparent;
+  -webkit-text-fill-color: transparent;
 }

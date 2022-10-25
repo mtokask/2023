@@ -1,8 +1,8 @@
 let angle = 0;
-let namecard;
+let closebtn;
 
 function preload() {
-  namecard = loadModel("namecard.obj");
+  closebtn = loadModel("closebtn.obj");
 }
 
 function setup() {
@@ -20,27 +20,23 @@ function draw() {
   //   directionalLight(255, 255, 255, 1, 1, 0);
   //   specularMaterial(255);
 
-  // namecard
+  // closebtn
   push();
-  translate(0, 0, 0);
+  translate(0, 260, 0);
+  // translate(frameCount * 1, frameCount * 0.5);
   // 適度なサイズに拡大
-  scale(0.9);
+  scale(3);
   // そのままでは逆さなので上下を逆にする
   rotateZ(180);
-  rotateY(angle * 0.5);
-
+  rotateY(angle * 3);
   // 描画
-  model(namecard);
+  model(closebtn);
   pop();
 
   angle += 1;
 }
 
 // mobile control settings
-//
-//
-//
-//
 
 document.oncontextmenu = function () {
   return false;

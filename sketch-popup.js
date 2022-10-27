@@ -121,7 +121,7 @@
 
 (function () {
     const closeBtn = document.querySelector('.close-btn');
-    window.addEventListener('click', () => {
+    closeBtn.addEventListener('click', () => {
         location.href = '/';
     });
 })();

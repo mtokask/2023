@@ -1,8 +1,14 @@
 let angle = 0;
 let namecard;
+let heart;
 
 function preload() {
+<<<<<<< HEAD
     namecard = loadModel('namecard.obj');
+=======
+  namecard = loadModel("namecard.obj");
+  heart = loadModel("heart.obj");
+>>>>>>> parent of d81f9ad (Update sketch.js)
 }
 
 function setup() {
@@ -14,11 +20,19 @@ function draw() {
     background(255);
     orbitControl();
 
+<<<<<<< HEAD
     noStroke();
     normalMaterial();
     //   ambientLight(0, 0, 255);
     //   directionalLight(255, 255, 255, 1, 1, 0);
     //   specularMaterial(255);
+=======
+  noStroke();
+  normalMaterial();
+  //   ambientLight(0, 0, 255);
+  //   directionalLight(255, 255, 255, 1, 1, 0);
+  //   specularMaterial(255);
+>>>>>>> parent of d81f9ad (Update sketch.js)
 
     // namecard
     push();
@@ -33,7 +47,24 @@ function draw() {
     model(namecard);
     pop();
 
+<<<<<<< HEAD
     angle += 1;
+=======
+  // heart
+  push();
+  // translate(frameCount * 1, frameCount * 0.5);
+  translate(0, 280, 0);
+  // 適度なサイズに拡大
+  scale(3);
+  // そのままでは逆さなので上下を逆にする
+  rotateZ(180);
+  rotateY(angle * 3);
+  // 描画
+  model(heart);
+  pop();
+
+  angle += 1;
+>>>>>>> parent of d81f9ad (Update sketch.js)
 }
 
 // mobile control settings
@@ -107,8 +138,8 @@ p5.prototype.orbitControl = function (sensitivityX, sensitivityY, sensitivityZ) 
     return this;
 };
 
-(function () {
-    setTimeout(() => {
-        location.href = '/popup.html';
-    }, 10000);
-})();
+// (function () {
+//     setTimeout(() => {
+//         location.href = '/popup.html';
+//     }, 10000);
+// })();

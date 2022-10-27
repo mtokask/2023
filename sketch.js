@@ -107,8 +107,8 @@ p5.prototype.orbitControl = function (sensitivityX, sensitivityY, sensitivityZ) 
     return this;
 };
 
-(function () {
-    setTimeout(() => {
-        location.href = '/popup.html';
-    }, 10000);
-})();
+// (function () {
+//     setTimeout(() => {
+//         location.href = '/popup.html';
+//     }, 10000);
+// })();

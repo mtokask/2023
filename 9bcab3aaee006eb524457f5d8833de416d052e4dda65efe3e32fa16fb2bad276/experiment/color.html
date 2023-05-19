@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎨MATSUOKA ASUKA</title>
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/lfv1zuy.css">
-    <link rel="icon" href="/assets/img/common/favcon.gif" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/lfv1zuy.css" />
+    <link rel="icon" href="../assets/img/common/favcon.gif" />
   </head>
   <body id="top">
     <div class="ss"></div>
@@ -26,7 +26,7 @@
       <main id="main">
         <article>
           <div id="canvas-container">
-            <div id='canvas'></div>
+            <div id="canvas"></div>
           </div>
           <div class="back">
             <a href="/experiment.html"><span>← BACK</span></a>
@@ -38,14 +38,14 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/ifvisible.js"></script>
-    <script src="/assets/js/sss.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/ifvisible.js"></script>
+    <script src="../assets/js/sss.js"></script>
     <script>
       let rectWidth;
       function setup() {
         let canvas = createCanvas(windowWidth, windowHeight);
-        canvas.parent('canvas');
+        canvas.parent("canvas");
         noStroke();
         randFill_r = Math.floor(Math.random() * 255 + 1);
         randFill_g = Math.floor(Math.random() * 255 + 1);
@@ -56,15 +56,15 @@
 
       function keyPressed() {
         let keyIndex = -1;
-        if (key >= 'a' && key <= 'z') {
-          keyIndex = key.charCodeAt(0) - 'a'.charCodeAt(0);
+        if (key >= "a" && key <= "z") {
+          keyIndex = key.charCodeAt(0) - "a".charCodeAt(0);
         }
         if (keyIndex === -1) {
           // If it's not a letter key, clear the screen
           randFill_r = Math.floor(Math.random() * 255 + 1);
-        randFill_g = Math.floor(Math.random() * 255 + 1);
-        randFill_b = Math.floor(Math.random() * 255 + 1);
-        background(randFill_r, randFill_g, randFill_b);
+          randFill_g = Math.floor(Math.random() * 255 + 1);
+          randFill_b = Math.floor(Math.random() * 255 + 1);
+          background(randFill_r, randFill_g, randFill_b);
         } else {
           // It's a letter key, fill a rectangle
           randFill_r = Math.floor(Math.random() * 255 + 1);

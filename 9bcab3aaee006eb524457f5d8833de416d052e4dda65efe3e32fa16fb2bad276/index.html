@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>.ma</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/lfv1zuy.css" />
+    <link rel="icon" href="assets/img/common/favcon.gif" />
+  </head>
+  <body id="top">
+    <div class="ss"></div>
+    <div class="wrapper">
+      <header id="header">
+        <h1 class="hd1"><a href="index.html">.ma</a></h1>
+        <div class="nav-toggle">&#x25A6;</div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="works.html">WORKS</a></li>
+            <li class="nav-item"><a href="experiment.html">EXPERIMENT</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main">
+        <article>
+          <div id="canvas-container">
+            <div id="canvas"></div>
+          </div>
+        </article>
+      </main>
+      <footer id="footer">
+        <small>&copy;MATSUOKA ASUKA</small>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/ifvisible.js"></script>
+    <script src="assets/js/sss.js"></script>
+    <script>
+      function setup() {
+        let canvas = createCanvas(windowWidth, windowHeight);
+        canvas.parent("canvas");
+        background(0);
+      }
+      function draw() {
+        // Call the variableEllipse() method and send it the
+        // parameters for the current mouse position
+        // and the previous mouse position
+        variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+      }
+
+      // The simple method variableEllipse() was created specifically
+      // for this program. It calculates the speed of the mouse
+      // and draws a small ellipse if the mouse is moving slowly
+      // and draws a large ellipse if the mouse is moving quickly
+
+      function variableEllipse(x, y, px, py) {
+        let speed = abs(x - px) + abs(y - py);
+        stroke(speed);
+        ellipse(x, y, speed, speed);
+      }
+    </script>
+  </body>
+</html>

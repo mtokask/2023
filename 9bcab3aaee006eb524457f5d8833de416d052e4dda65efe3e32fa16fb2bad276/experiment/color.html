@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎨MATSUOKA ASUKA</title>
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/lfv1zuy.css">
+    <link rel="icon" href="/assets/img/common/favcon.gif" />
+  </head>
+  <body id="top">
+    <div class="ss"></div>
+    <div class="wrapper">
+      <header id="header">
+        <h1 class="hd1"><a href="/index.html">MATSUOKA ASUKA</a></h1>
+        <div class="nav-toggle">&#x25A6;</div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="/works.html">WORKS</a></li>
+            <li class="nav-item"><a href="/experiment.html">EXPERIMENT</a></li>
+            <li class="nav-item"><a href="/about.html">ABOUT</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main">
+        <article>
+          <div id="canvas-container">
+            <div id='canvas'></div>
+          </div>
+          <div class="back">
+            <a href="/experiment.html"><span>← BACK</span></a>
+          </div>
+        </article>
+      </main>
+      <footer id="footer">
+        <small>&copy;MATSUOKA ASUKA</small>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/ifvisible.js"></script>
+    <script src="/assets/js/sss.js"></script>
+    <script>
+      let rectWidth;
+      function setup() {
+        let canvas = createCanvas(windowWidth, windowHeight);
+        canvas.parent('canvas');
+        noStroke();
+        randFill_r = Math.floor(Math.random() * 255 + 1);
+        randFill_g = Math.floor(Math.random() * 255 + 1);
+        randFill_b = Math.floor(Math.random() * 255 + 1);
+        background(randFill_r, randFill_g, randFill_b);
+        rectWidth = width / 4;
+      }
+
+      function keyPressed() {
+        let keyIndex = -1;
+        if (key >= 'a' && key <= 'z') {
+          keyIndex = key.charCodeAt(0) - 'a'.charCodeAt(0);
+        }
+        if (keyIndex === -1) {
+          // If it's not a letter key, clear the screen
+          randFill_r = Math.floor(Math.random() * 255 + 1);
+        randFill_g = Math.floor(Math.random() * 255 + 1);
+        randFill_b = Math.floor(Math.random() * 255 + 1);
+        background(randFill_r, randFill_g, randFill_b);
+        } else {
+          // It's a letter key, fill a rectangle
+          randFill_r = Math.floor(Math.random() * 255 + 1);
+          randFill_g = Math.floor(Math.random() * 255 + 1);
+          randFill_b = Math.floor(Math.random() * 255 + 1);
+          fill(randFill_r, randFill_g, randFill_b);
+          let x = map(keyIndex, 0, 25, 0, width - rectWidth);
+          rect(x, 0, rectWidth, height);
+        }
+      }
+    </script>
+  </body>
+</html>

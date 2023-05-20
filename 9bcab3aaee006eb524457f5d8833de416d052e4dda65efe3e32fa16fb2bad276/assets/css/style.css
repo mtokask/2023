@@ -187,7 +187,7 @@ video {
   margin-bottom: 90px;
 }
 
-#works #main .works-list .works-item:nth-last-of-type(-n + 3) {
+#works #main .works-list .works-item:nth-last-of-type(-n + 4) {
   margin-bottom: 0;
 }
 
@@ -207,7 +207,7 @@ video {
 }
 
 #works #main .works-list .works-item .ttl.is-show {
-  opacity: 0;
+  opacity: 100%;
 }
 
 #works #main .works-list .works-item .mask {
@@ -217,14 +217,14 @@ video {
   display: block;
   width: 100%;
   height: 100%;
-  mix-blend-mode: saturation;
-  background-color: #666666;
   border-radius: 50%;
   opacity: 1;
 }
 
 #works #main .works-list .works-item .mask.is-show {
-  opacity: 0;
+  opacity: 100%;
+  mix-blend-mode: saturation;
+  background-color: #666666;
 }
 
 /*--------------------

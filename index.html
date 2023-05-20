@@ -11,10 +11,14 @@
     <script type="text/javascript" src="sha256.js"></script>
   </head>
   <body>
-    <form id="form">
+    <div class="wrapper">
       <p id="message">Please enter your password.</p>
-      <input type="password" placeholder="password" id="password" />
-    </form>
+      <form id="form">
+        <input type="password" placeholder="password" id="password" />
+        <input type="submit" value="GO" id="btn-submit" />
+      </form>
+    </div>
+
     <script>
       function hash(text) {
         const sha = new jsSHA("SHA-256", "TEXT");

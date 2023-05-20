@@ -62,49 +62,77 @@ a {
   cursor: -webkit-image-set(url("common/cursor_on.png") 1x, url("common/cursor_on_2x.png") 2x), auto !important;
 }
 
+input[type="submit"] {
+  cursor: url("common/cursor_on.png"), auto !important;
+  cursor: -webkit-image-set(url("common/cursor_on.png") 1x, url("common/cursor_on_2x.png") 2x), auto !important;
+}
+
 /*————————————————————————————————*/
 /* Style */
 /*————————————————————————————————*/
 html {
-  height: 100%;
+  /* height: 100%; */
   background-color: rgb(255, 255, 255);
 }
 
 body {
+  min-height: 100vh;
   font-family: neue-haas-grotesk-display, sans-serif;
   font-weight: 400;
   letter-spacing: 0.08em;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+}
+
+form {
+  text-align: center;
+  width: 100%;
+  /* margin: calc(50vh - 100px) auto 0; */
+  /* max-width: 300px; */
+  /* width: 90vw; */
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-column-gap: 5px;
 }
 
 input {
+  font-size: 20px;
   font-weight: 900;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   width: 100%;
   height: 50px;
   border-radius: 2px;
   border-style: groove;
   border-color: #000000;
   color: #000000;
-  -webkit-text-fill-color: #000000;
   background-color: #fff;
-  font-size: 20px;
 }
-input::placeholder {
+
+input[type="password"]::placeholder {
+  color: #bdbdbd;
+}
+
+input[type="submit"] {
+  width: 85px;
+  background-color: #000000;
+  color: #fff;
+}
+
+/* input::placeholder {
   color: #fff;
   -webkit-text-fill-color: #bdbdbd;
-}
-form {
-  text-align: center;
-  margin: calc(50vh - 100px) auto 0;
-  max-width: 400px;
-  width: 90vw;
-}
+} */
+
 p {
+  text-align: center;
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-weight: 600;
   font-size: 20px;
   line-height: 40px;
-  color: #000000;
-  -webkit-text-fill-color: #000000;
+  /* color: #000000;
+  -webkit-text-fill-color: #000000; */
 }

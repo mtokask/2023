@@ -676,6 +676,7 @@ video {
     width: 100%;
     height: 100vh;
     margin: auto;
+    /* background-color: #96fb47; */
     background: url(../img/common/acd-bg.gif);
     background-size: cover;
     background-repeat: no-repeat;

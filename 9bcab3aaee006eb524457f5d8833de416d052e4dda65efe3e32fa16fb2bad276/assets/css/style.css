@@ -376,6 +376,7 @@ video {
 
 #works-detail .credit .description {
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 #works-detail .credit .staff {
@@ -737,6 +738,7 @@ video {
   #about #main article .left {
     width: 100%;
     margin-bottom: 50px;
+    text-align: justify;
   }
   #about #main article .right {
     width: 100%;

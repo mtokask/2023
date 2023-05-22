@@ -207,7 +207,7 @@ video {
 }
 
 #works #main .works-list .works-item .ttl.is-show {
-  opacity: 100%;
+  opacity: 0;
 }
 
 #works #main .works-list .works-item .mask {
@@ -223,8 +223,8 @@ video {
 
 #works #main .works-list .works-item .mask.is-show {
   opacity: 100%;
-  mix-blend-mode: saturation;
-  background-color: #666666;
+  mix-blend-mode: screen;
+  background-color: #b2b2b2;
 }
 
 /*--------------------
@@ -364,18 +364,18 @@ video {
   margin: 0 auto 30px;
 }
 
+#works-detail .credit .ttl {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
 #works-detail .credit {
   font-size: 1.5rem;
   letter-spacing: 0.08em;
   line-height: 1.8;
 }
 
-#works-detail .credit .ttl {
-  margin-bottom: 30px;
-}
-
 #works-detail .credit .description {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -409,6 +409,14 @@ video {
   font-size: 1.5rem;
   vertical-align: middle;
   line-height: 1;
+}
+
+.url {
+  border-bottom: 1px solid #000;
+}
+.url:hover {
+  color: #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 /*--------------------

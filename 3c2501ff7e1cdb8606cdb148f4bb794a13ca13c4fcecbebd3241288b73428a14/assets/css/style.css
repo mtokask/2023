@@ -673,6 +673,10 @@ video {
 ★SmartPhone★
 --------------------*/
 @media screen and (max-width: 768px) {
+  body {
+    min-height: 100svh;
+  }
+
   .pcnone {
     display: block !important;
   }

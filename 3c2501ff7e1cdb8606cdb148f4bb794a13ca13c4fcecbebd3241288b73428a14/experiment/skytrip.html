@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="🐈" />
+    <meta meta="meta" property="og:description" content="🐈‍⬛" />
+    <meta name="theme-color" content="#0565C7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛🐈</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  </head>
+  <body>
+    <div class="full">
+      <div id="video-area">
+        <video id="video" poster="" webkit-playsinline playsinline muted autoplay loop>
+          <source src="images/sky.mp4" type="video/mp4" />
+          <p>動画を再生できる環境ではありません🐈‍⬛🐈</p>
+        </video>
+      </div>
+    </div>
+  </body>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    #video-area {
+      position: fixed;
+      z-index: -1; /*最背面に設定*/
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+
+    #video {
+      /*天地中央配置*/
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*縦横幅指定*/
+      width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+      height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+      min-height: 100%;
+      min-width: 100%;
+    }
+    .full {
+      background-image: url(images/bg.png);
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      z-index: 999;
+    }
+    .full::before {
+      content: "";
+      display: block;
+      padding-top: 50%;
+    }
+
+    @media only screen and (max-width: 750px) {
+      .full {
+        background-image: url(images/bg-sp.png);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+      }
+      .full::before {
+        content: "";
+        display: block;
+        padding-top: 50%;
+      }
+    }
+  </style>
+</html>

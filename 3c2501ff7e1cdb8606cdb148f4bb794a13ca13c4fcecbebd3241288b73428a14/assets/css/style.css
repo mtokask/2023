@@ -679,6 +679,16 @@ video {
     height: -webkit-fill-available;
   }
 
+  @supports (-webkit-touch-callout: none) {
+    html {
+      height: -webkit-fill-available;
+    }
+
+    body {
+      min-height: 100vh;
+      height: -webkit-fill-available;
+    }
+  }
   .pcnone {
     display: block !important;
   }

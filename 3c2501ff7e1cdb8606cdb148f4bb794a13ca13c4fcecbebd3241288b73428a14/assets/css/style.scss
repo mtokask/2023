@@ -33,19 +33,11 @@ common
 html {
   overflow-y: scroll;
   cursor: url("../img/common/cursor.png"), auto !important;
-  cursor: -webkit-image-set(
-      url("../img/common/cursor.png") 1x,
-      url("../img/common/cursor_2x.png") 2x
-    ),
-    auto !important;
+  cursor: -webkit-image-set(url("../img/common/cursor.png") 1x, url("../img/common/cursor_2x.png") 2x), auto !important;
 }
 a {
   cursor: url("../img/common/cursor_on.png"), auto !important;
-  cursor: -webkit-image-set(
-      url("../img/common/cursor_on.png") 1x,
-      url("../img/common/cursor_on_2x.png") 2x
-    ),
-    auto !important;
+  cursor: -webkit-image-set(url("../img/common/cursor_on.png") 1x, url("../img/common/cursor_on_2x.png") 2x), auto !important;
 }
 html,
 body {
@@ -118,8 +110,7 @@ video {
   height: auto;
 }
 .yugo {
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3",
-    "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
 }
 .ss {
   width: 100%;
@@ -212,11 +203,11 @@ video {
   }
 }
 /*--------------------
-■experiment
+■PLAYGROUND
 --------------------*/
-#experiment #main {
-  .experiment-list {
-    .experiment-item {
+#PLAYGROUND #main {
+  .PLAYGROUND-list {
+    .PLAYGROUND-item {
       a {
         display: flex;
         justify-content: space-between;
@@ -369,16 +360,11 @@ video {
   }
 }
 /*--------------------
-●experiment>>fingerprint
+●PLAYGROUND>>fingerprint
 --------------------*/
 #fingerprint {
   position: relative;
-  background: linear-gradient(
-      253.44deg,
-      rgba(147, 147, 147, 0.3) 7.14%,
-      rgba(255, 255, 255, 0) 97.53%
-    ),
-    #000000;
+  background: linear-gradient(253.44deg, rgba(147, 147, 147, 0.3) 7.14%, rgba(255, 255, 255, 0) 97.53%), #000000;
   #header,
   #footer {
     color: #fff;
@@ -409,14 +395,14 @@ video {
     }
   }
   .stmp {
-    background: url(/assets/img/experiment/fingerprint/fingerprint.svg);
+    background: url(/assets/img/PLAYGROUND/fingerprint/fingerprint.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
   }
 }
 /*--------------------
-●experiment>>blur
+●PLAYGROUND>>blur
 --------------------*/
 #blur {
   position: relative;
@@ -480,7 +466,7 @@ video {
         z-index: 2;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         transition: 0.4s;
-        background-image: url(/assets/img/experiment/blur/megene.svg);
+        background-image: url(/assets/img/PLAYGROUND/blur/megene.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -497,7 +483,7 @@ video {
   }
 }
 /*--------------------
-●experiment>>clock
+●PLAYGROUND>>clock
 --------------------*/
 #clock #main {
   .kv {
@@ -512,11 +498,7 @@ video {
       }
       #timer {
         color: rgba(255, 255, 255, 0.5); //非対応のブラウザでの文字色を設定
-        background: -webkit-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.5),
-          rgba(255, 255, 255, 1)
-        );
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
         position: absolute;
@@ -549,7 +531,7 @@ video {
   }
 }
 /*--------------------
-●experiment>>blank
+●PLAYGROUND>>blank
 --------------------*/
 #blank {
   position: relative;

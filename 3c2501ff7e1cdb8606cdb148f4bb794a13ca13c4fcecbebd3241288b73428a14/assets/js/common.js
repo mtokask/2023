@@ -15,3 +15,9 @@
     });
   }
 })();
+
+(function () {
+  let headerH = document.querySelector("#header").clientHeight;
+  const main = document.querySelector("#main");
+  main.style.paddingTop = headerH + "px";
+})();

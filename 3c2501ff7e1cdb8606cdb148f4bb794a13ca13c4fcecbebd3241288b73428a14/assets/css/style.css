@@ -675,6 +675,7 @@ video {
 @media screen and (max-width: 768px) {
   body {
     min-height: 100vh;
+    min-height: 100svh;
     height: -webkit-fill-available;
   }
 
@@ -711,10 +712,7 @@ video {
     height: 100vh;
     margin: auto;
     background-color: #fff;
-    /* background: url(../img/common/acd-bg.gif); */
     background-size: cover;
-    /* background-repeat: no-repeat;
-    background-position: center; */
   }
   #header nav .nav-list {
     display: block;

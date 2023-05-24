@@ -835,4 +835,17 @@ video {
   #works-detail .video-box-yoko {
     width: 100%;
   }
+  #works-detail .credit .ttl {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  #works-detail .credit {
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+  }
+  #works-detail .credit .description {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
 }

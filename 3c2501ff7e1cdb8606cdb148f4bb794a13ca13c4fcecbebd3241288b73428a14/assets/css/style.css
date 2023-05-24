@@ -693,9 +693,6 @@ video {
     display: block;
     justify-content: space-between;
   }
-  #top #main {
-    min-height: -webkit-fill-available;
-  }
   #header .hd1 {
     margin-bottom: 20px;
     position: fixed;

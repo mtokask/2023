@@ -246,6 +246,7 @@ video {
   height: 100vh;
   display: grid;
   align-items: center;
+  height: -webkit-fill-available;
 }
 
 #playground #main .playground-list .playground-item a {

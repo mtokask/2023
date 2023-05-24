@@ -771,6 +771,10 @@ video {
   /*--------------------
   ■about
   --------------------*/
+  #about #main {
+    height: auto;
+  }
+
   #about #main article {
     display: block;
   }

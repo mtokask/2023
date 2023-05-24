@@ -780,8 +780,12 @@ video {
   }
   #about #main article .left {
     width: 100%;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: justify;
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
   }
   #about #main article .right {
     width: 100%;

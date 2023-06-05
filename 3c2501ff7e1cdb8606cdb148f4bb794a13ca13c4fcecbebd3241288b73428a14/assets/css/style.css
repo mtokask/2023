@@ -807,7 +807,9 @@ video {
     border-bottom: 1px solid #d3d3d3;
     color: #d3d3d3;
   }
-
+  .pc-only {
+    display: none;
+  }
   /*--------------------
   ●works >> works-detail
   --------------------*/

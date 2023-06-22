@@ -12,7 +12,7 @@ common
 
 ::selection {
   background-color: #ff00f2;
-  color: #00e1ff;
+  color: #00ffff;
 }
 
 ::-webkit-scrollbar {
@@ -112,8 +112,8 @@ body {
 }
 
 #header a:hover {
-  border-bottom: 1px solid #d3d3d3;
-  color: #d3d3d3;
+  border-bottom: 1px solid #00ffff;
+  color: #00ffff;
 }
 
 #footer {
@@ -236,7 +236,7 @@ video {
 #works #main .works-list .works-item .mask.is-show {
   opacity: 100%;
   mix-blend-mode: screen;
-  background-color: #b2b2b2;
+  background-color: #ff00f2;
 }
 
 /*--------------------
@@ -260,8 +260,8 @@ video {
 }
 
 #playground #main .playground-list .playground-item a:hover {
-  border-bottom: 1px solid #d3d3d3;
-  color: #d3d3d3;
+  border-bottom: 1px solid #00ffff;
+  color: #00ffff;
 }
 
 /*--------------------
@@ -304,8 +304,8 @@ video {
 }
 
 #about #main article .left .intro .url:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 #about #main article .left .contact .hd4 {
@@ -314,7 +314,7 @@ video {
 
 #about #main article .left .contact a {
   margin-bottom: 10px;
-  color: #d3d3d3;
+  color: #00ffff;
 }
 
 #about #main article .right {
@@ -423,8 +423,8 @@ video {
 }
 
 #works-detail .back a:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 #works-detail .back a span {
@@ -437,8 +437,8 @@ video {
   border-bottom: 1px solid #000;
 }
 .url:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 /*--------------------
@@ -480,8 +480,8 @@ video {
 }
 
 #fingerprint #main .back a:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 #fingerprint .stmp {
@@ -529,8 +529,8 @@ video {
 }
 
 #blur .wrapper #main .back a:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 #blur .toggle-switch {
@@ -630,8 +630,8 @@ video {
 }
 
 .back a:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 /*--------------------
@@ -667,8 +667,8 @@ video {
 }
 
 #blank #main .back a:hover {
-  color: #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
 }
 
 /*--------------------
@@ -804,8 +804,8 @@ video {
   }
 
   #playground #main .playground-list .playground-item a:hover {
-    border-bottom: 1px solid #d3d3d3;
-    color: #d3d3d3;
+    border-bottom: 1px solid #00ffff;
+    color: #00ffff;
   }
   .pc-only {
     display: none;

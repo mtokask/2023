@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- <p id="message">Please enter the password that you have received.</p> -->
+      <p id="message">Please enter the password 🔐</p>
       <form id="form">
         <input type="password" placeholder="password" id="password" />
         <input type="submit" value="GO" id="btn-submit" />
@@ -37,7 +37,7 @@
           } else {
             const message = document.getElementById("message");
             const input = document.getElementById("password");
-            message.innerHTML = "Wrong password! Try again.";
+            message.innerHTML = "Wrong password. Try again 🌀";
             input.value = "";
           }
         };

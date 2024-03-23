@@ -154,14 +154,14 @@ video {
 }
 
 /*--------------------
-■works
+■work
 --------------------*/
-#works #main {
-  .works-list {
+#work #main {
+  .work-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .works-item {
+    .work-item {
       position: relative;
       width: 28%;
       margin-bottom: 90px;
@@ -270,9 +270,9 @@ video {
   }
 }
 /*--------------------
-●works >> works-detail
+●work >> work-detail
 --------------------*/
-#works-detail {
+#work-detail {
   .img-box {
     width: 100%;
     margin-bottom: 30px;
@@ -639,12 +639,12 @@ video {
   }
 
   /*--------------------
-  ■works
+  ■work
   --------------------*/
-  #works #main {
-    .works-list {
+  #work #main {
+    .work-list {
       display: block;
-      .works-item {
+      .work-item {
         width: 100%;
         &:nth-last-of-type(-n + 3) {
           margin-bottom: 90px;
@@ -711,9 +711,9 @@ video {
     }
   }
   /*--------------------
-  ●works >> works-detail
+  ●work >> work-detail
   --------------------*/
-  #works-detail {
+  #work-detail {
     .img-box-30 {
       width: 100%;
     }

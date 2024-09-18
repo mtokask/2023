@@ -37,17 +37,6 @@ common
   border: 0.1rem solid #fff;
 }
 
-html {
-  overflow-y: scroll;
-  cursor: url("../img/common/cursor.png"), auto !important;
-  cursor: -webkit-image-set(url("../img/common/cursor.png") 1x, url("../img/common/cursor_2x.png") 2x), auto !important;
-}
-
-a {
-  cursor: url("../img/common/cursor_on.png"), auto !important;
-  cursor: -webkit-image-set(url("../img/common/cursor_on.png") 1x, url("../img/common/cursor_on_2x.png") 2x), auto !important;
-}
-
 html,
 body {
   width: 100%;
@@ -234,7 +223,7 @@ video {
 }
 
 #work #main .work-list .work-item .mask.is-show {
-  opacity: 100%;
+  opacity: 50%;
   mix-blend-mode: screen;
   background-color: #ff00f2;
 }

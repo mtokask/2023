@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>.ma</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/lfv1zuy.css" />
-    <link rel="icon" href="assets/img/common/favcon.gif" />
+    <link rel="icon" href="common/favcon.gif" />
+    <script type="text/javascript" src="sha256.js"></script>
   </head>
-  <body id="top">
-    <div class="ss"></div>
+  <body>
     <div class="wrapper">
-      <header id="header">
-        <h1 class="hd1"><a href="index.html">.ma</a></h1>
-        <div class="nav-toggle">&#x25A4;</div>
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="work.html">WORK</a></li>
-            <li class="nav-item"><a href="playground.html">PLAYGROUND</a></li>
-            <li class="nav-item"><a href="about.html">ABOUT</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main id="main">
-        <article>
-          <div id="canvas-container">
-            <div id="canvas"></div>
-          </div>
-        </article>
-      </main>
-      <footer id="footer">
-        <small>&copy;MATSUOKA ASUKA</small>
-      </footer>
+      <p id="message">Please enter the password 🔐</p>
+      <form id="form">
+        <input type="password" placeholder="password" id="password" />
+        <input type="submit" value="GO" id="btn-submit" />
+      </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-    <script src="assets/js/common.js"></script>
-    <script src="assets/js/ifvisible.js"></script>
-    <script src="assets/js/sss.js"></script>
+
     <script>
-      function setup() {
-        let canvas = createCanvas(windowWidth, windowHeight);
-        canvas.parent("canvas");
-        background(0);
+      function hash(text) {
+        const sha = new jsSHA("SHA-256", "TEXT");
+        sha.update(text);
+        return sha.getHash("HEX");
       }
-      function draw() {
-        // Call the variableEllipse() method and send it the
-        // parameters for the current mouse position
-        // and the previous mouse position
-        variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+      function auth(password) {
+        const url = hash(password);
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.onload = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            window.location = url;
+          } else {
+            const message = document.getElementById("message");
+            const input = document.getElementById("password");
+            message.innerHTML = "Wrong password. Try again 🌀";
+            input.value = "";
+          }
+        };
+        xhr.onerror = function () {
+          const message = document.getElementById("message");
+          message.innerHTML = "Sorry, ERROR !";
+        };
       }
-
-      // The simple method variableEllipse() was created specifically
-      // for this program. It calculates the speed of the mouse
-      // and draws a small ellipse if the mouse is moving slowly
-      // and draws a large ellipse if the mouse is moving quickly
-
-      function variableEllipse(x, y, px, py) {
-        let speed = abs(x - px) + abs(y - py);
-        stroke(speed);
-        ellipse(x, y, speed, speed);
-      }
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (event) {
+        const password = document.getElementById("password").value;
+        auth(password);
+        event.preventDefault();
+      });
     </script>
   </body>
 </html>
